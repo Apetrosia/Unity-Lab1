@@ -90,12 +90,12 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     ""maps"": [
         {
             ""name"": ""Player"",
-            ""id"": ""ac62365d-68cb-4ec2-ae05-c9a0de521f13"",
+            ""id"": ""8307defe-6846-4fb1-a4fb-ec752f8bc98b"",
             ""actions"": [
                 {
                     ""name"": ""Move"",
                     ""type"": ""Value"",
-                    ""id"": ""176aa620-03f8-4ea1-b194-a0a69acd455d"",
+                    ""id"": ""ab3e956f-812b-4d97-bcb8-fbfb09bac4c6"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -105,7 +105,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""Jump"",
                     ""type"": ""Button"",
-                    ""id"": ""ae5b3821-f4a7-4a8c-9fb1-5dcc4014f284"",
+                    ""id"": ""c2d97cfd-d545-4822-a576-e99bde781734"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
@@ -115,18 +115,8 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""Look"",
                     ""type"": ""Value"",
-                    ""id"": ""84cde522-2f0d-43a1-b0ac-5f6200c4718c"",
+                    ""id"": ""d62f85b8-e773-4445-9717-8bb42c8e1e26"",
                     ""expectedControlType"": ""Vector2"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": true,
-                    ""priority"": 0
-                },
-                {
-                    ""name"": ""Zoom"",
-                    ""type"": ""Value"",
-                    ""id"": ""af6fc5db-0edb-4f16-8f0e-cf97ab2e1254"",
-                    ""expectedControlType"": ""Axis"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true,
@@ -136,7 +126,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             ""bindings"": [
                 {
                     ""name"": ""2D Vector"",
-                    ""id"": ""ee391ff9-dc94-48cb-a42d-d40b79dbc001"",
+                    ""id"": ""01b0c095-fd4d-4e28-b214-7040648aaf6a"",
                     ""path"": ""2DVector"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -147,7 +137,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""up"",
-                    ""id"": ""7f05ef57-d588-41b9-99f8-8a926297ea4b"",
+                    ""id"": ""0a6d8997-e570-4421-8e04-08f5d92f6d48"",
                     ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -158,7 +148,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""down"",
-                    ""id"": ""8925e067-2134-4c73-8d54-2820307195f1"",
+                    ""id"": ""c80b9bf7-345e-4932-9921-19089c2c73ca"",
                     ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -169,7 +159,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""left"",
-                    ""id"": ""b9c17fb9-35cd-4818-9028-2945d3f0a2cf"",
+                    ""id"": ""ce9f7716-d77a-416e-9bec-6cbbfb8bbbf3"",
                     ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -180,7 +170,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""right"",
-                    ""id"": ""1132b2c6-aca4-49ea-be8a-f0fdfb82e511"",
+                    ""id"": ""f9176402-ee21-49e1-bb8e-f47d89cd8f2f"",
                     ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -191,7 +181,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""da768915-5fd5-4070-8689-c260f4b459ff"",
+                    ""id"": ""0fdbf802-b1ff-4a5f-aec5-9eb078992167"",
                     ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -202,23 +192,12 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""fa2bdb90-93c6-417a-8f6b-369e07c7e2e2"",
+                    ""id"": ""e078e14e-0a11-48b7-b0ae-c376d41ede65"",
                     ""path"": ""<Mouse>/delta"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Look"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""72336755-2965-43e6-9976-ecfcd43949ea"",
-                    ""path"": ""<Mouse>/scroll/y"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Zoom"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -232,7 +211,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
         m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
         m_Player_Look = m_Player.FindAction("Look", throwIfNotFound: true);
-        m_Player_Zoom = m_Player.FindAction("Zoom", throwIfNotFound: true);
     }
 
     ~@PlayerInput()
@@ -316,7 +294,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Move;
     private readonly InputAction m_Player_Jump;
     private readonly InputAction m_Player_Look;
-    private readonly InputAction m_Player_Zoom;
     /// <summary>
     /// Provides access to input actions defined in input action map "Player".
     /// </summary>
@@ -340,10 +317,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Player/Look".
         /// </summary>
         public InputAction @Look => m_Wrapper.m_Player_Look;
-        /// <summary>
-        /// Provides access to the underlying input action "Player/Zoom".
-        /// </summary>
-        public InputAction @Zoom => m_Wrapper.m_Player_Zoom;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -379,9 +352,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Look.started += instance.OnLook;
             @Look.performed += instance.OnLook;
             @Look.canceled += instance.OnLook;
-            @Zoom.started += instance.OnZoom;
-            @Zoom.performed += instance.OnZoom;
-            @Zoom.canceled += instance.OnZoom;
         }
 
         /// <summary>
@@ -402,9 +372,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Look.started -= instance.OnLook;
             @Look.performed -= instance.OnLook;
             @Look.canceled -= instance.OnLook;
-            @Zoom.started -= instance.OnZoom;
-            @Zoom.performed -= instance.OnZoom;
-            @Zoom.canceled -= instance.OnZoom;
         }
 
         /// <summary>
@@ -466,12 +433,5 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnLook(InputAction.CallbackContext context);
-        /// <summary>
-        /// Method invoked when associated input action "Zoom" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
-        /// </summary>
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnZoom(InputAction.CallbackContext context);
     }
 }

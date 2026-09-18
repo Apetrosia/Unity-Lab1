@@ -86,7 +86,7 @@ public class PlayerController : MonoBehaviour
 
             if (isHoldingWall)
             {
-                                rb.linearVelocity = new Vector3(rb.linearVelocity.x, 0, rb.linearVelocity.z);
+                rb.linearVelocity = new Vector3(rb.linearVelocity.x, 0, rb.linearVelocity.z);
             }
         }
         else

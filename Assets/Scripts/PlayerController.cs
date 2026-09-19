@@ -153,5 +153,9 @@ public class PlayerController : MonoBehaviour
         {
             isGrounded = false;
         }
+        else if (collision.gameObject.layer == 6)
+        {
+            isWallStuck = false;
+        }
     }
 }

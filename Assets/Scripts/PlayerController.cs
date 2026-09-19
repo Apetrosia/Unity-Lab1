@@ -125,24 +125,22 @@ public class PlayerController : MonoBehaviour
 
     void OnCollisionStay(Collision collision)
     {
-        if (collision.gameObject.layer == 3)
+        foreach (ContactPoint contact in collision.contacts)
         {
-            isGrounded = true;
-            isWallStuck = false;
-            rb.mass = 1f;
-        }
-
-        if (!isGrounded)
-        {
-            foreach (ContactPoint contact in collision.contacts)
+            if (Mathf.Abs(contact.normal.y) < 0.7f)
             {
-                if (Mathf.Abs(contact.normal.y) < 0.7f)
-                {
-                    isWallStuck = true;
-                    wallNormal = contact.normal;
-                    rb.mass = wallMass;
-                    break;
-                }
+                isGrounded = false;
+                isWallStuck = true;
+                wallNormal = contact.normal;
+                rb.mass = wallMass;
+                break;
+            }
+            else
+            {
+                isGrounded = true;
+                isWallStuck = false;
+                rb.mass = 1f;
+                break;
             }
         }
     }

@@ -9,6 +9,10 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 10f;
     public float jumpForce = 5f;
 
+    [Header("Настройки респавна")]
+    public float fallLimit = -5f;
+    public Vector3 respawnPoint = new Vector3(0, 0.5f, 0);
+
     [Header("Настройки стены")]
     public float wallSlideSpeed = 2f;
     public float wallJumpForce = 8f;
@@ -48,6 +52,11 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if (transform.position.y < fallLimit)
+        {
+            Respawn();
+        }
+
         if (jumpAction != null && jumpAction.WasPressedThisFrame() && isGrounded && !isWallStuck)
         {
             wantsToJump = true;
@@ -56,11 +65,23 @@ public class PlayerController : MonoBehaviour
         if (isWallStuck && jumpAction != null && jumpAction.WasPressedThisFrame())
         {
             isWallStuck = false;
-            rb.mass = 1f; 
-            Vector3 jumpDirection = (Vector3.up + wallNormal).normalized;
+            rb.mass = 1f;
+            Vector3 jumpDirection = (Vector3.up * 2 + wallNormal).normalized;
             rb.AddForce(jumpDirection * wallJumpForce, ForceMode.Impulse);
             rb.linearVelocity = new Vector3(rb.linearVelocity.x, 0, rb.linearVelocity.z);
         }
+    }
+
+    private void Respawn()
+    {
+        transform.position = respawnPoint;
+
+        rb.linearVelocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
+
+        isGrounded = false;
+        isWallStuck = false;
+        rb.mass = 1f;
     }
 
     void FixedUpdate()
@@ -102,7 +123,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnCollisionStay(Collision collision)
     {
         if (collision.gameObject.layer == 3)
         {
